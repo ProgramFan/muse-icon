@@ -1,0 +1,5 @@
+1. Rewrite the wiki-to-html converter using pure python
+2. Rethink the structure of the program and refactor the code to 
+   reflect the changes
+3. Make use of gettext to internationalize the program.
+
