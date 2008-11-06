@@ -4,4 +4,7 @@
 3. Make use of gettext to internationalize the program.
 4. Support <latex></latex> tags in MuseWiki
    Notice: Add something to the MuseWiki.get_html_content() part
+5. Add new CSS support in MuseWiki.get_html_content(), to beautify
+   the html output.
+
 
