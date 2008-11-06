@@ -2,4 +2,6 @@
 2. Rethink the structure of the program and refactor the code to 
    reflect the changes
 3. Make use of gettext to internationalize the program.
+4. Support <latex></latex> tags in MuseWiki
+   Notice: Add something to the MuseWiki.get_html_content() part
 
