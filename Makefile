@@ -4,6 +4,21 @@
 # Last updated: 2008-10-27 17:41:38
 #
 
+INSTALL = /usr/bin/install
+
+APP_MAIN = main.py
+OBJECTS = ${APP_MAIN} ui_viewer.py ui_statusicon.py settings.py \
+		  muse_helper.py app_globals.py
+		  
+DEST_DIR = /usr/local
+APP_NAME = muse-icon
+
+all:
+
 install:
-	/usr/bin/install muse-icon.py /usr/local/muse-icon/muse-icon.py
-	ln -s /usr/local/muse-icon/muse-icon.py /usr/local/bin/muse-icon
+	if [ ! -d ${DEST_DIR}/${APP_NAME} ]; then \
+		mkdir -p ${DEST_DIR}/${APP_NAME}; \
+	fi
+	${INSTALL} ${OBJECTS} ${DEST_DIR}/${APP_NAME}
+	chmod a+x ${DEST_DIR}/${APP_NAME}/${APP_MAIN}
+	ln -sf ${DEST_DIR}/${APP_NAME}/${APP_MAIN} ${DEST_DIR}/bin/${APP_NAME}
