@@ -51,6 +51,8 @@ class MuseWikiViewer():
     " A GTK+ Muse Wiki Viewer "
     def __check_emacs(self):
         emacs_socket_dir = "/tmp/emacs" + str(os.getuid())
+        if not os.path.exists(emacs_socket_dir):
+            return False
         if os.listdir(emacs_socket_dir):
             return True
         else:
