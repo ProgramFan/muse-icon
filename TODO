@@ -7,5 +7,3 @@
 5. Add new CSS support in MuseWiki.get_html_content(), to beautify
    the html output.
 
-
-test line
