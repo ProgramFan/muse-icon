@@ -22,3 +22,6 @@ install:
 	${INSTALL} ${OBJECTS} ${DEST_DIR}/${APP_NAME}
 	chmod a+x ${DEST_DIR}/${APP_NAME}/${APP_MAIN}
 	ln -sf ${DEST_DIR}/${APP_NAME}/${APP_MAIN} ${DEST_DIR}/bin/${APP_NAME}
+
+clean:
+	-rm -f *.pyc

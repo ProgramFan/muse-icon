@@ -152,7 +152,10 @@ class MuseWikiViewer():
         else:
             # Internal link: generate the html file and view it
             muse_notes_dir = settings.get_notes_dir()
-            muse_name_base = os.path.splitext(link)[0]
+            request_file = os.path.splitext(urlparse(link)[2])
+            if request_file[-1] != ".html":
+                return
+            muse_name_base = request_file[0]
             wiki_file = os.path.join(muse_notes_dir, muse_name_base 
                                           + ".muse")
             self.history_prev_button.set_sensitive(True)
